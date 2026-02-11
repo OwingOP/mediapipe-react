@@ -14,7 +14,7 @@
     "test": "turbo run test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",
-    "release": "turbo build && pnpm changeset publish --provenance",
+    "release": "turbo build && changeset publish",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui"
   },
