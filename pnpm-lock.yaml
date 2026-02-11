@@ -159,12 +159,6 @@ importers:
         specifier: ^4.0.18
         version: 4.0.18(@types/node@20.19.33)(@vitest/ui@4.0.18)(jiti@1.21.7)(jsdom@28.0.0)(yaml@2.8.2)
 
-  temp_changeset:
-    dependencies:
-      '@changesets/cli':
-        specifier: ^2.29.8
-        version: 2.29.8(@types/node@20.19.33)
-
 packages:
 
   '@acemir/cssom@0.9.31':
