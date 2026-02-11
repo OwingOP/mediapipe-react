@@ -1,5 +1,11 @@
 # @ismail-kattakath/mediapipe-react
 
+## 0.1.2
+
+### Patch Changes
+
+- 5068d0c: Implement automated coverage gates, mocking utility, and Codecov integration.
+
 ## 0.1.1
 
 ### Patch Changes
