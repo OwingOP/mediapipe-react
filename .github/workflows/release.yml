@@ -5,21 +5,20 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-  id-token: write
-  pull-requests: write
-
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      pull-requests: write
     environment: npm-release
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: false
 
@@ -29,24 +28,29 @@ jobs:
           version: 9
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 22
+          node-version: 24
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --ignore-scripts
+
+      - name: NPM Diagnostics
+        run: |
+          npm --version
+          npm config list
+          npm whoami || echo "Not logged in (Expected if OIDC not yet active)"
 
       - name: Build
         run: pnpm build
 
       - name: Create Release Pull Request or Publish to NPM
         id: changesets
-        uses: changesets/action@e0145edc7d9d8679003495b11f87bd8ef63c0cba
+        uses: changesets/action@v1.5.3
         with:
           # This expects you to have a script called 'release' which usually calls 'changeset publish'
           publish: npx changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ""
-          NPM_CONFIG_PROVENANCE: true
+          NPM_TOKEN: "" # Workaround. See https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
