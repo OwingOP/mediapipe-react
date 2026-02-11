@@ -137,6 +137,7 @@ export function useLlm(options: UseLlmOptions = {}) {
       setIsLoading(true);
       setProgress(10); // Initial progress
     }, 0);
+
     worker.postMessage({
       type: "INIT",
       payload: { modelPath, wasmPath },

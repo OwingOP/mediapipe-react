@@ -3,8 +3,9 @@
 <div align="center">
 
 [![NPM Version](https://img.shields.io/npm/v/@ismail-kattakath/mediapipe-react.svg?style=flat-square)](https://www.npmjs.com/package/@ismail-kattakath/mediapipe-react)
-[![License](https://img.shields.io/npm/l/@ismail-kattakath/mediapipe-react.svg?style=flat-square)](https://github.com/ismail-kattakath/mediapipe-react/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/ismail-kattakath/mediapipe-react?style=flat-square)](https://github.com/ismail-kattakath/mediapipe-react/blob/main/LICENSE)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/ismail-kattakath/mediapipe-react/ci.yml?branch=main&style=flat-square)](https://github.com/ismail-kattakath/mediapipe-react/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/ismail-kattakath/mediapipe-react/branch/main/graph/badge.svg)](https://codecov.io/gh/ismail-kattakath/mediapipe-react)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
 
 **Production-ready React hooks for MediaPipe AI tasks — GenAI, Vision, and Audio.**

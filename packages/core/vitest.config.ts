@@ -8,5 +8,21 @@ export default defineConfig({
     globals: true,
     setupFiles: "./src/setupTests.ts",
     include: ["src/__tests__/**/*.{test,spec}.{ts,tsx}"],
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "json", "html", "lcov"],
+      exclude: [
+        "src/__tests__/**",
+        "src/test-utils/**",
+        "dist/**",
+        "**/*.config.*",
+      ],
+      thresholds: {
+        lines: 80,
+        functions: 80,
+        branches: 75,
+        statements: 80,
+      },
+    },
   },
 });

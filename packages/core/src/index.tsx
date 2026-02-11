@@ -3,9 +3,8 @@
 import React, { createContext, useContext, useMemo } from "react";
 import { isBrowser } from "./utils";
 
-export * from "./genai";
-export * from "./vision";
-export * from "./audio";
+export { useLlm } from "./genai";
+export type { UseLlmOptions } from "./genai";
 
 export interface MediaPipeContextType {
   wasmPath?: string;
