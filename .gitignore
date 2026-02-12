@@ -36,3 +36,6 @@ apps/**/*.bin
 
 # Logs
 *.log
+
+# Output files
+*_output.txt
