@@ -80,6 +80,9 @@ We are following a phased rollout to cover the full breadth of MediaPipe's capab
 
 ### Phase 2: Vision Core (Next)
 
+### Phase 2: Vision Core (In Progress)
+
+- [x] **Face Landmarker**: High-fidelity face landmark detection
 - [ ] **Hand Tracking**: 2D and 3D hand landmark detection
 - [ ] **Face Mesh**: High-fidelity face landmark detection
 - [ ] **Object Detection**: Identifying and locating multiple objects in images/video

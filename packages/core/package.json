@@ -30,6 +30,11 @@
       "import": "./dist/vision.mjs",
       "require": "./dist/vision.js"
     },
+    "./vision.worker": {
+      "types": "./dist/vision.worker.d.ts",
+      "import": "./dist/vision.worker.mjs",
+      "require": "./dist/vision.worker.js"
+    },
     "./audio": {
       "types": "./dist/audio.d.ts",
       "import": "./dist/audio.mjs",
@@ -52,10 +57,12 @@
   },
   "peerDependencies": {
     "@mediapipe/tasks-genai": "^0.10.0",
+    "@mediapipe/tasks-vision": "^0.10.0",
     "react": ">=18",
     "react-dom": ">=18"
   },
   "devDependencies": {
+    "@mediapipe/tasks-vision": "^0.10.32",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",

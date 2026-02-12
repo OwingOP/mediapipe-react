@@ -243,6 +243,78 @@ function ChatInterface() {
 }
 ```
 
+### Vision
+
+#### `useFaceLandmarker`
+
+Hook for real-time face landmark detection.
+
+**Parameters:**
+
+```typescript
+interface UseFaceLandmarkerOptions {
+  modelPath?: string; // Path to face_landmarker.task
+  wasmPath?: string; // Path to wasm files
+}
+```
+
+**Returns:**
+
+```typescript
+{
+  detect: (input: HTMLVideoElement | HTMLCanvasElement | ImageData, timestamp: number) => void;
+  results: { faceLandmarks: { x: number; y: number; z: number }[][] } | null;
+  isLoading: boolean;
+  error: string | null;
+}
+```
+
+**Example:**
+
+```tsx
+import {
+  useFaceLandmarker,
+  drawLandmarks,
+} from "@ismail-kattakath/mediapipe-react/vision";
+import { useEffect, useRef } from "react";
+
+function FaceTracker() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { detect, results, isLoading } = useFaceLandmarker();
+
+  const processFrame = () => {
+    if (videoRef.current && canvasRef.current) {
+      const now = performance.now();
+      detect(videoRef.current, now);
+
+      const ctx = canvasRef.current.getContext("2d");
+      if (ctx) {
+        ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+        drawLandmarks(canvasRef.current, results);
+      }
+
+      requestAnimationFrame(processFrame);
+    }
+  };
+
+  return (
+    <>
+      <video ref={videoRef} autoPlay playsInline />
+      <canvas ref={canvasRef} />
+    </>
+  );
+}
+```
+
+#### `drawLandmarks`
+
+Utility to draw face landmarks on a canvas.
+
+```typescript
+drawLandmarks(canvas: HTMLCanvasElement, results: unknown): void
+```
+
 ## Next.js / SSR Compatibility
 
 This library is **fully compatible** with Next.js App Router and Server-Side Rendering.

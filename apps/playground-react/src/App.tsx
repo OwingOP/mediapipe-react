@@ -1,12 +1,13 @@
 import { MediaPipeProvider } from "@ismail-kattakath/mediapipe-react";
-import { useVision } from "@ismail-kattakath/mediapipe-react/vision";
+import { useFaceLandmarker } from "@ismail-kattakath/mediapipe-react/vision";
 
 function App() {
+  const { isLoading } = useFaceLandmarker();
   return (
     <MediaPipeProvider>
       <div style={{ padding: "2rem" }}>
         <h1>Vite Playground</h1>
-        <p>Testing Library: {useVision()}</p>
+        <p>Vision Status: {isLoading ? "Loading..." : "Ready"}</p>
       </div>
     </MediaPipeProvider>
   );
