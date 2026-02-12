@@ -1,5 +1,11 @@
 # @ismail-kattakath/mediapipe-react
 
+## 0.2.0
+
+### Minor Changes
+
+- 3adbd10: feat: add initial Vision support with useFaceLandmarker hooks↵
+
 ## 0.1.3
 
 ### Patch Changes
